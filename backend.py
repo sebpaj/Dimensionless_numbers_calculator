@@ -1,4 +1,4 @@
-class Calculations:
+class Calculations(object):
 
     def __init__(self):
         pass
@@ -19,7 +19,7 @@ class Calculations:
 
         return h*l/k
 
-    def calculate_rayleigh(self,g,b,ni,alpha,T1,T2,x):
+    def calculate_rayleigh(self,g,b,T1,T2,x,ni,alpha):
 
         return g*b*(T1-T2)*pow(x,3)/(ni*alpha)
 
@@ -37,7 +37,7 @@ class Calculations:
 
     def calculateBiot(self,h,l,k):
 
-        return l*h/k
+        return h*l/k
 
     def calculateStokes(self,t,u,l):
 
